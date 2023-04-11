@@ -7,12 +7,10 @@ on:
 jobs:
   variables:
     runs-on: ubuntu-latest
-    env:
-      name: live
     steps:
       - name: Check out the codebase.
         uses: actions/checkout@v3
 
       - name: Run the make command with MY_VARIABLE set from the environment variable.
         run: |
-          MY_VARIABLE=$name make
+          MY_VARIABLE=${{ vars.MY_VARIABLE }} make
