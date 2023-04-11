@@ -13,4 +13,4 @@ jobs:
 
       - name: Run the make command with MY_VARIABLE set from the environment variable.
         run: |
-          MY_VARIABLE=${{ vars.MY_VARIABLE }} make
+          MY_VARIABLE=${{ vars.MY_VARIABLE }} VAR_2=${{ vars.VAR_2 }} VAR_3=${{ vars.VAR_3 }} make
